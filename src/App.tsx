@@ -1,4 +1,4 @@
-import React, { type FC } from 'react';
+import React, { FC } from 'react';
 import { Container, Typography } from '@mui/material';
 
 import { ResidentialComplex } from 'components/ResidentialComplex/ResidentialComplex';

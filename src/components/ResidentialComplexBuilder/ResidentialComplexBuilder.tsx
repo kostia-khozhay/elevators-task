@@ -1,5 +1,5 @@
-import React, { type FC, useEffect } from 'react';
-import { type SubmitHandler, useFieldArray, useForm } from 'react-hook-form';
+import React, { FC, useEffect } from 'react';
+import { SubmitHandler, useFieldArray, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Box, Button, TextField, Typography } from '@mui/material';
 import { v4 as uuidv4 } from 'uuid';
@@ -34,7 +34,7 @@ export const ResidentialComplexBuilder: FC = () => {
     handleSubmit,
   } = useForm<FormType>({
     mode: 'onChange',
-    defaultValues: { buildingsCount: 0, buildingsData: [] },
+    defaultValues: { buildingsCount: '' as unknown as number, buildingsData: [] },
     resolver: yupResolver(Schema),
   });
 
@@ -45,7 +45,9 @@ export const ResidentialComplexBuilder: FC = () => {
   useEffect(() => {
     if (!hasBuildingsCountError && watchBuildingsCount) {
       replace(
-        new Array(watchBuildingsCount).fill('').map(value => ({ floors: value, elevators: value })),
+        new Array(watchBuildingsCount)
+          .fill('')
+          .map(() => ({ floors: '' as unknown as number, elevators: '' as unknown as number })),
       );
     }
   }, [hasBuildingsCountError, watchBuildingsCount]);

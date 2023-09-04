@@ -1,4 +1,4 @@
-import React, { type FC, memo, useMemo } from 'react';
+import React, { FC, memo, useMemo } from 'react';
 
 import { ELEVATOR_WIDTH, FLOOR_HEIGHT } from 'constants/constants';
 import { ElevatorData } from 'types/types';

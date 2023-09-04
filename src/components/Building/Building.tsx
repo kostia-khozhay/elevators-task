@@ -1,4 +1,4 @@
-import React, { type FC, memo } from 'react';
+import React, { FC, memo } from 'react';
 
 import { BuildingElevator } from 'components/BuildingElevator/BuildingElevator';
 import { useBuildingElevatorManager } from 'hooks/useBuildingElevatorManager';

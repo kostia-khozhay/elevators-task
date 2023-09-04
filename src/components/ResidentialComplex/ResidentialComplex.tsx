@@ -1,4 +1,4 @@
-import React, { type FC } from 'react';
+import React, { FC } from 'react';
 
 import { Building } from 'components/Building/Building';
 import { useBuildingElevatorsStore } from 'store/buildingElevatorsStore';
