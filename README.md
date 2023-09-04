@@ -1,7 +1,7 @@
 ## Elevators Task
 
 ### Demo:
-![Alt text](public/Demo.gif "Demo")
+![Alt text](public/demo.gif "Demo")
 
 Screenshot:
 ![Alt text](public/Screenshot.png "Demo")
